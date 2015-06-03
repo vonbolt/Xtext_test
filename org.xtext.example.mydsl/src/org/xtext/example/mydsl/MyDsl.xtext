@@ -3,7 +3,13 @@ grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
 generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
 
 Model:
-	greetings+=Greeting*;
+	greetings+=Greeting*
+	imports+=Import*;
 	
 Greeting:
-	'Hello' name=ID '!';
+	'Hello' name=ID '!'
+;
+	
+Import:
+	Import_type='ImportNumber' import_num=INT ';'
+;

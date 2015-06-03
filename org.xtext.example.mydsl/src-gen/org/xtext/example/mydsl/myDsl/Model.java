@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.myDsl.Model#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.myDsl.Model#getImports <em>Imports</em>}</li>
  * </ul>
  * </p>
  *
@@ -39,5 +40,21 @@ public interface Model extends EObject
    * @generated
    */
   EList<Greeting> getGreetings();
+
+  /**
+   * Returns the value of the '<em><b>Imports</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.myDsl.Import}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Imports</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Imports</em>' containment reference list.
+   * @see org.xtext.example.mydsl.myDsl.MyDslPackage#getModel_Imports()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Import> getImports();
 
 } // Model

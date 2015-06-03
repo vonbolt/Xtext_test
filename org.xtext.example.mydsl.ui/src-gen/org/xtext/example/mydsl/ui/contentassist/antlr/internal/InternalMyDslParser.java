@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Hello'", "'!'", "';'", "'ImportNumber'"
     };
     public static final int RULE_ID=4;
     public static final int RULE_WS=9;
@@ -33,6 +33,8 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     public static final int T__11=11;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
     public static final int EOF=-1;
 
     // delegates
@@ -103,49 +105,31 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleModel"
-    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:69:1: ruleModel : ( ( rule__Model__GreetingsAssignment )* ) ;
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:69:1: ruleModel : ( ( rule__Model__Group__0 ) ) ;
     public final void ruleModel() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:73:2: ( ( ( rule__Model__GreetingsAssignment )* ) )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:74:1: ( ( rule__Model__GreetingsAssignment )* )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:73:2: ( ( ( rule__Model__Group__0 ) ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:74:1: ( ( rule__Model__Group__0 ) )
             {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:74:1: ( ( rule__Model__GreetingsAssignment )* )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:75:1: ( rule__Model__GreetingsAssignment )*
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:74:1: ( ( rule__Model__Group__0 ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:75:1: ( rule__Model__Group__0 )
             {
-             before(grammarAccess.getModelAccess().getGreetingsAssignment()); 
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:76:1: ( rule__Model__GreetingsAssignment )*
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+             before(grammarAccess.getModelAccess().getGroup()); 
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:76:1: ( rule__Model__Group__0 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:76:2: rule__Model__Group__0
+            {
+            pushFollow(FOLLOW_rule__Model__Group__0_in_ruleModel94);
+            rule__Model__Group__0();
 
-                if ( (LA1_0==11) ) {
-                    alt1=1;
-                }
+            state._fsp--;
 
 
-                switch (alt1) {
-            	case 1 :
-            	    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:76:2: rule__Model__GreetingsAssignment
-            	    {
-            	    pushFollow(FOLLOW_rule__Model__GreetingsAssignment_in_ruleModel94);
-            	    rule__Model__GreetingsAssignment();
+            }
 
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop1;
-                }
-            } while (true);
-
-             after(grammarAccess.getModelAccess().getGreetingsAssignment()); 
+             after(grammarAccess.getModelAccess().getGroup()); 
 
             }
 
@@ -175,13 +159,13 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:90:1: ruleGreeting EOF
             {
              before(grammarAccess.getGreetingRule()); 
-            pushFollow(FOLLOW_ruleGreeting_in_entryRuleGreeting122);
+            pushFollow(FOLLOW_ruleGreeting_in_entryRuleGreeting121);
             ruleGreeting();
 
             state._fsp--;
 
              after(grammarAccess.getGreetingRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleGreeting129); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleGreeting128); 
 
             }
 
@@ -214,7 +198,7 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
             // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:104:1: ( rule__Greeting__Group__0 )
             // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:104:2: rule__Greeting__Group__0
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__0_in_ruleGreeting155);
+            pushFollow(FOLLOW_rule__Greeting__Group__0_in_ruleGreeting154);
             rule__Greeting__Group__0();
 
             state._fsp--;
@@ -244,22 +228,300 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleGreeting"
 
 
+    // $ANTLR start "entryRuleImport"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:116:1: entryRuleImport : ruleImport EOF ;
+    public final void entryRuleImport() throws RecognitionException {
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:117:1: ( ruleImport EOF )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:118:1: ruleImport EOF
+            {
+             before(grammarAccess.getImportRule()); 
+            pushFollow(FOLLOW_ruleImport_in_entryRuleImport181);
+            ruleImport();
+
+            state._fsp--;
+
+             after(grammarAccess.getImportRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImport188); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleImport"
+
+
+    // $ANTLR start "ruleImport"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:125:1: ruleImport : ( ( rule__Import__Group__0 ) ) ;
+    public final void ruleImport() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:129:2: ( ( ( rule__Import__Group__0 ) ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:130:1: ( ( rule__Import__Group__0 ) )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:130:1: ( ( rule__Import__Group__0 ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:131:1: ( rule__Import__Group__0 )
+            {
+             before(grammarAccess.getImportAccess().getGroup()); 
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:132:1: ( rule__Import__Group__0 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:132:2: rule__Import__Group__0
+            {
+            pushFollow(FOLLOW_rule__Import__Group__0_in_ruleImport214);
+            rule__Import__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getImportAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleImport"
+
+
+    // $ANTLR start "rule__Model__Group__0"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:146:1: rule__Model__Group__0 : rule__Model__Group__0__Impl rule__Model__Group__1 ;
+    public final void rule__Model__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:150:1: ( rule__Model__Group__0__Impl rule__Model__Group__1 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:151:2: rule__Model__Group__0__Impl rule__Model__Group__1
+            {
+            pushFollow(FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0248);
+            rule__Model__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0251);
+            rule__Model__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__Group__0"
+
+
+    // $ANTLR start "rule__Model__Group__0__Impl"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:158:1: rule__Model__Group__0__Impl : ( ( rule__Model__GreetingsAssignment_0 )* ) ;
+    public final void rule__Model__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:162:1: ( ( ( rule__Model__GreetingsAssignment_0 )* ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:163:1: ( ( rule__Model__GreetingsAssignment_0 )* )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:163:1: ( ( rule__Model__GreetingsAssignment_0 )* )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:164:1: ( rule__Model__GreetingsAssignment_0 )*
+            {
+             before(grammarAccess.getModelAccess().getGreetingsAssignment_0()); 
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:165:1: ( rule__Model__GreetingsAssignment_0 )*
+            loop1:
+            do {
+                int alt1=2;
+                int LA1_0 = input.LA(1);
+
+                if ( (LA1_0==11) ) {
+                    alt1=1;
+                }
+
+
+                switch (alt1) {
+            	case 1 :
+            	    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:165:2: rule__Model__GreetingsAssignment_0
+            	    {
+            	    pushFollow(FOLLOW_rule__Model__GreetingsAssignment_0_in_rule__Model__Group__0__Impl278);
+            	    rule__Model__GreetingsAssignment_0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop1;
+                }
+            } while (true);
+
+             after(grammarAccess.getModelAccess().getGreetingsAssignment_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Model__Group__1"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:175:1: rule__Model__Group__1 : rule__Model__Group__1__Impl ;
+    public final void rule__Model__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:179:1: ( rule__Model__Group__1__Impl )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:180:2: rule__Model__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__1309);
+            rule__Model__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__Group__1"
+
+
+    // $ANTLR start "rule__Model__Group__1__Impl"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:186:1: rule__Model__Group__1__Impl : ( ( rule__Model__ImportsAssignment_1 )* ) ;
+    public final void rule__Model__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:190:1: ( ( ( rule__Model__ImportsAssignment_1 )* ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:191:1: ( ( rule__Model__ImportsAssignment_1 )* )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:191:1: ( ( rule__Model__ImportsAssignment_1 )* )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:192:1: ( rule__Model__ImportsAssignment_1 )*
+            {
+             before(grammarAccess.getModelAccess().getImportsAssignment_1()); 
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:193:1: ( rule__Model__ImportsAssignment_1 )*
+            loop2:
+            do {
+                int alt2=2;
+                int LA2_0 = input.LA(1);
+
+                if ( (LA2_0==14) ) {
+                    alt2=1;
+                }
+
+
+                switch (alt2) {
+            	case 1 :
+            	    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:193:2: rule__Model__ImportsAssignment_1
+            	    {
+            	    pushFollow(FOLLOW_rule__Model__ImportsAssignment_1_in_rule__Model__Group__1__Impl336);
+            	    rule__Model__ImportsAssignment_1();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop2;
+                }
+            } while (true);
+
+             after(grammarAccess.getModelAccess().getImportsAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__Group__1__Impl"
+
+
     // $ANTLR start "rule__Greeting__Group__0"
-    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:118:1: rule__Greeting__Group__0 : rule__Greeting__Group__0__Impl rule__Greeting__Group__1 ;
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:207:1: rule__Greeting__Group__0 : rule__Greeting__Group__0__Impl rule__Greeting__Group__1 ;
     public final void rule__Greeting__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:122:1: ( rule__Greeting__Group__0__Impl rule__Greeting__Group__1 )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:123:2: rule__Greeting__Group__0__Impl rule__Greeting__Group__1
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:211:1: ( rule__Greeting__Group__0__Impl rule__Greeting__Group__1 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:212:2: rule__Greeting__Group__0__Impl rule__Greeting__Group__1
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0189);
+            pushFollow(FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0371);
             rule__Greeting__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0192);
+            pushFollow(FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0374);
             rule__Greeting__Group__1();
 
             state._fsp--;
@@ -283,20 +545,20 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__0__Impl"
-    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:130:1: rule__Greeting__Group__0__Impl : ( 'Hello' ) ;
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:219:1: rule__Greeting__Group__0__Impl : ( 'Hello' ) ;
     public final void rule__Greeting__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:134:1: ( ( 'Hello' ) )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:135:1: ( 'Hello' )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:223:1: ( ( 'Hello' ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:224:1: ( 'Hello' )
             {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:135:1: ( 'Hello' )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:136:1: 'Hello'
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:224:1: ( 'Hello' )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:225:1: 'Hello'
             {
              before(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
-            match(input,11,FOLLOW_11_in_rule__Greeting__Group__0__Impl220); 
+            match(input,11,FOLLOW_11_in_rule__Greeting__Group__0__Impl402); 
              after(grammarAccess.getGreetingAccess().getHelloKeyword_0()); 
 
             }
@@ -320,21 +582,21 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__1"
-    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:149:1: rule__Greeting__Group__1 : rule__Greeting__Group__1__Impl rule__Greeting__Group__2 ;
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:238:1: rule__Greeting__Group__1 : rule__Greeting__Group__1__Impl rule__Greeting__Group__2 ;
     public final void rule__Greeting__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:153:1: ( rule__Greeting__Group__1__Impl rule__Greeting__Group__2 )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:154:2: rule__Greeting__Group__1__Impl rule__Greeting__Group__2
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:242:1: ( rule__Greeting__Group__1__Impl rule__Greeting__Group__2 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:243:2: rule__Greeting__Group__1__Impl rule__Greeting__Group__2
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1251);
+            pushFollow(FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1433);
             rule__Greeting__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1254);
+            pushFollow(FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1436);
             rule__Greeting__Group__2();
 
             state._fsp--;
@@ -358,23 +620,23 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__1__Impl"
-    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:161:1: rule__Greeting__Group__1__Impl : ( ( rule__Greeting__NameAssignment_1 ) ) ;
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:250:1: rule__Greeting__Group__1__Impl : ( ( rule__Greeting__NameAssignment_1 ) ) ;
     public final void rule__Greeting__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:165:1: ( ( ( rule__Greeting__NameAssignment_1 ) ) )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:166:1: ( ( rule__Greeting__NameAssignment_1 ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:254:1: ( ( ( rule__Greeting__NameAssignment_1 ) ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:255:1: ( ( rule__Greeting__NameAssignment_1 ) )
             {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:166:1: ( ( rule__Greeting__NameAssignment_1 ) )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:167:1: ( rule__Greeting__NameAssignment_1 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:255:1: ( ( rule__Greeting__NameAssignment_1 ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:256:1: ( rule__Greeting__NameAssignment_1 )
             {
              before(grammarAccess.getGreetingAccess().getNameAssignment_1()); 
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:168:1: ( rule__Greeting__NameAssignment_1 )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:168:2: rule__Greeting__NameAssignment_1
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:257:1: ( rule__Greeting__NameAssignment_1 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:257:2: rule__Greeting__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl281);
+            pushFollow(FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl463);
             rule__Greeting__NameAssignment_1();
 
             state._fsp--;
@@ -405,16 +667,16 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__2"
-    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:178:1: rule__Greeting__Group__2 : rule__Greeting__Group__2__Impl ;
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:267:1: rule__Greeting__Group__2 : rule__Greeting__Group__2__Impl ;
     public final void rule__Greeting__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:182:1: ( rule__Greeting__Group__2__Impl )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:183:2: rule__Greeting__Group__2__Impl
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:271:1: ( rule__Greeting__Group__2__Impl )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:272:2: rule__Greeting__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2311);
+            pushFollow(FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2493);
             rule__Greeting__Group__2__Impl();
 
             state._fsp--;
@@ -438,20 +700,20 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Greeting__Group__2__Impl"
-    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:189:1: rule__Greeting__Group__2__Impl : ( '!' ) ;
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:278:1: rule__Greeting__Group__2__Impl : ( '!' ) ;
     public final void rule__Greeting__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:193:1: ( ( '!' ) )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:194:1: ( '!' )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:282:1: ( ( '!' ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:283:1: ( '!' )
             {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:194:1: ( '!' )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:195:1: '!'
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:283:1: ( '!' )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:284:1: '!'
             {
              before(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
-            match(input,12,FOLLOW_12_in_rule__Greeting__Group__2__Impl339); 
+            match(input,12,FOLLOW_12_in_rule__Greeting__Group__2__Impl521); 
              after(grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2()); 
 
             }
@@ -474,26 +736,70 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Greeting__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Model__GreetingsAssignment"
-    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:215:1: rule__Model__GreetingsAssignment : ( ruleGreeting ) ;
-    public final void rule__Model__GreetingsAssignment() throws RecognitionException {
+    // $ANTLR start "rule__Import__Group__0"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:303:1: rule__Import__Group__0 : rule__Import__Group__0__Impl rule__Import__Group__1 ;
+    public final void rule__Import__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:219:1: ( ( ruleGreeting ) )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:220:1: ( ruleGreeting )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:307:1: ( rule__Import__Group__0__Impl rule__Import__Group__1 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:308:2: rule__Import__Group__0__Impl rule__Import__Group__1
             {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:220:1: ( ruleGreeting )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:221:1: ruleGreeting
-            {
-             before(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment381);
-            ruleGreeting();
+            pushFollow(FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__0558);
+            rule__Import__Group__0__Impl();
 
             state._fsp--;
 
-             after(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
+            pushFollow(FOLLOW_rule__Import__Group__1_in_rule__Import__Group__0561);
+            rule__Import__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Import__Group__0"
+
+
+    // $ANTLR start "rule__Import__Group__0__Impl"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:315:1: rule__Import__Group__0__Impl : ( ( rule__Import__Import_typeAssignment_0 ) ) ;
+    public final void rule__Import__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:319:1: ( ( ( rule__Import__Import_typeAssignment_0 ) ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:320:1: ( ( rule__Import__Import_typeAssignment_0 ) )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:320:1: ( ( rule__Import__Import_typeAssignment_0 ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:321:1: ( rule__Import__Import_typeAssignment_0 )
+            {
+             before(grammarAccess.getImportAccess().getImport_typeAssignment_0()); 
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:322:1: ( rule__Import__Import_typeAssignment_0 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:322:2: rule__Import__Import_typeAssignment_0
+            {
+            pushFollow(FOLLOW_rule__Import__Import_typeAssignment_0_in_rule__Import__Group__0__Impl588);
+            rule__Import__Import_typeAssignment_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getImportAccess().getImport_typeAssignment_0()); 
 
             }
 
@@ -512,24 +818,261 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Model__GreetingsAssignment"
+    // $ANTLR end "rule__Import__Group__0__Impl"
+
+
+    // $ANTLR start "rule__Import__Group__1"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:332:1: rule__Import__Group__1 : rule__Import__Group__1__Impl rule__Import__Group__2 ;
+    public final void rule__Import__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:336:1: ( rule__Import__Group__1__Impl rule__Import__Group__2 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:337:2: rule__Import__Group__1__Impl rule__Import__Group__2
+            {
+            pushFollow(FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__1618);
+            rule__Import__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Import__Group__2_in_rule__Import__Group__1621);
+            rule__Import__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Import__Group__1"
+
+
+    // $ANTLR start "rule__Import__Group__1__Impl"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:344:1: rule__Import__Group__1__Impl : ( ( rule__Import__Import_numAssignment_1 ) ) ;
+    public final void rule__Import__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:348:1: ( ( ( rule__Import__Import_numAssignment_1 ) ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:349:1: ( ( rule__Import__Import_numAssignment_1 ) )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:349:1: ( ( rule__Import__Import_numAssignment_1 ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:350:1: ( rule__Import__Import_numAssignment_1 )
+            {
+             before(grammarAccess.getImportAccess().getImport_numAssignment_1()); 
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:351:1: ( rule__Import__Import_numAssignment_1 )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:351:2: rule__Import__Import_numAssignment_1
+            {
+            pushFollow(FOLLOW_rule__Import__Import_numAssignment_1_in_rule__Import__Group__1__Impl648);
+            rule__Import__Import_numAssignment_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getImportAccess().getImport_numAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Import__Group__1__Impl"
+
+
+    // $ANTLR start "rule__Import__Group__2"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:361:1: rule__Import__Group__2 : rule__Import__Group__2__Impl ;
+    public final void rule__Import__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:365:1: ( rule__Import__Group__2__Impl )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:366:2: rule__Import__Group__2__Impl
+            {
+            pushFollow(FOLLOW_rule__Import__Group__2__Impl_in_rule__Import__Group__2678);
+            rule__Import__Group__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Import__Group__2"
+
+
+    // $ANTLR start "rule__Import__Group__2__Impl"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:372:1: rule__Import__Group__2__Impl : ( ';' ) ;
+    public final void rule__Import__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:376:1: ( ( ';' ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:377:1: ( ';' )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:377:1: ( ';' )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:378:1: ';'
+            {
+             before(grammarAccess.getImportAccess().getSemicolonKeyword_2()); 
+            match(input,13,FOLLOW_13_in_rule__Import__Group__2__Impl706); 
+             after(grammarAccess.getImportAccess().getSemicolonKeyword_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Import__Group__2__Impl"
+
+
+    // $ANTLR start "rule__Model__GreetingsAssignment_0"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:398:1: rule__Model__GreetingsAssignment_0 : ( ruleGreeting ) ;
+    public final void rule__Model__GreetingsAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:402:1: ( ( ruleGreeting ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:403:1: ( ruleGreeting )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:403:1: ( ruleGreeting )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:404:1: ruleGreeting
+            {
+             before(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment_0748);
+            ruleGreeting();
+
+            state._fsp--;
+
+             after(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__GreetingsAssignment_0"
+
+
+    // $ANTLR start "rule__Model__ImportsAssignment_1"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:413:1: rule__Model__ImportsAssignment_1 : ( ruleImport ) ;
+    public final void rule__Model__ImportsAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:417:1: ( ( ruleImport ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:418:1: ( ruleImport )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:418:1: ( ruleImport )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:419:1: ruleImport
+            {
+             before(grammarAccess.getModelAccess().getImportsImportParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_1779);
+            ruleImport();
+
+            state._fsp--;
+
+             after(grammarAccess.getModelAccess().getImportsImportParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Model__ImportsAssignment_1"
 
 
     // $ANTLR start "rule__Greeting__NameAssignment_1"
-    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:230:1: rule__Greeting__NameAssignment_1 : ( RULE_ID ) ;
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:428:1: rule__Greeting__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Greeting__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:234:1: ( ( RULE_ID ) )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:235:1: ( RULE_ID )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:432:1: ( ( RULE_ID ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:433:1: ( RULE_ID )
             {
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:235:1: ( RULE_ID )
-            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:236:1: RULE_ID
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:433:1: ( RULE_ID )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:434:1: RULE_ID
             {
              before(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1412); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1810); 
              after(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -551,6 +1094,88 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__Greeting__NameAssignment_1"
 
+
+    // $ANTLR start "rule__Import__Import_typeAssignment_0"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:443:1: rule__Import__Import_typeAssignment_0 : ( ( 'ImportNumber' ) ) ;
+    public final void rule__Import__Import_typeAssignment_0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:447:1: ( ( ( 'ImportNumber' ) ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:448:1: ( ( 'ImportNumber' ) )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:448:1: ( ( 'ImportNumber' ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:449:1: ( 'ImportNumber' )
+            {
+             before(grammarAccess.getImportAccess().getImport_typeImportNumberKeyword_0_0()); 
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:450:1: ( 'ImportNumber' )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:451:1: 'ImportNumber'
+            {
+             before(grammarAccess.getImportAccess().getImport_typeImportNumberKeyword_0_0()); 
+            match(input,14,FOLLOW_14_in_rule__Import__Import_typeAssignment_0846); 
+             after(grammarAccess.getImportAccess().getImport_typeImportNumberKeyword_0_0()); 
+
+            }
+
+             after(grammarAccess.getImportAccess().getImport_typeImportNumberKeyword_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Import__Import_typeAssignment_0"
+
+
+    // $ANTLR start "rule__Import__Import_numAssignment_1"
+    // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:466:1: rule__Import__Import_numAssignment_1 : ( RULE_INT ) ;
+    public final void rule__Import__Import_numAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:470:1: ( ( RULE_INT ) )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:471:1: ( RULE_INT )
+            {
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:471:1: ( RULE_INT )
+            // ../org.xtext.example.mydsl.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalMyDsl.g:472:1: RULE_INT
+            {
+             before(grammarAccess.getImportAccess().getImport_numINTTerminalRuleCall_1_0()); 
+            match(input,RULE_INT,FOLLOW_RULE_INT_in_rule__Import__Import_numAssignment_1885); 
+             after(grammarAccess.getImportAccess().getImport_numINTTerminalRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Import__Import_numAssignment_1"
+
     // Delegated rules
 
 
@@ -558,19 +1183,38 @@ public class InternalMyDslParser extends AbstractInternalContentAssistParser {
 
     public static final BitSet FOLLOW_ruleModel_in_entryRuleModel61 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleModel68 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Model__GreetingsAssignment_in_ruleModel94 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_ruleGreeting_in_entryRuleGreeting122 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleGreeting129 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__0_in_ruleGreeting155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0189 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0192 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Greeting__Group__0__Impl220 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1251 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1254 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl281 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2311 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Greeting__Group__2__Impl339 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment381 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1412 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__0_in_ruleModel94 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGreeting_in_entryRuleGreeting121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleGreeting128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__0_in_ruleGreeting154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_entryRuleImport181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImport188 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__0_in_ruleImport214 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__Group__0__Impl_in_rule__Model__Group__0248 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Model__Group__1_in_rule__Model__Group__0251 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__GreetingsAssignment_0_in_rule__Model__Group__0__Impl278 = new BitSet(new long[]{0x0000000000000802L});
+    public static final BitSet FOLLOW_rule__Model__Group__1__Impl_in_rule__Model__Group__1309 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Model__ImportsAssignment_1_in_rule__Model__Group__1__Impl336 = new BitSet(new long[]{0x0000000000004002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__0__Impl_in_rule__Greeting__Group__0371 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__1_in_rule__Greeting__Group__0374 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__Greeting__Group__0__Impl402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__1__Impl_in_rule__Greeting__Group__1433 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__2_in_rule__Greeting__Group__1436 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__NameAssignment_1_in_rule__Greeting__Group__1__Impl463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Greeting__Group__2__Impl_in_rule__Greeting__Group__2493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__Greeting__Group__2__Impl521 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__0__Impl_in_rule__Import__Group__0558 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__Import__Group__1_in_rule__Import__Group__0561 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Import_typeAssignment_0_in_rule__Import__Group__0__Impl588 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__1__Impl_in_rule__Import__Group__1618 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_rule__Import__Group__2_in_rule__Import__Group__1621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Import_numAssignment_1_in_rule__Import__Group__1__Impl648 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Import__Group__2__Impl_in_rule__Import__Group__2678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Import__Group__2__Impl706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleGreeting_in_rule__Model__GreetingsAssignment_0748 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImport_in_rule__Model__ImportsAssignment_1779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Greeting__NameAssignment_1810 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Import__Import_typeAssignment_0846 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_rule__Import__Import_numAssignment_1885 = new BitSet(new long[]{0x0000000000000002L});
 
 }

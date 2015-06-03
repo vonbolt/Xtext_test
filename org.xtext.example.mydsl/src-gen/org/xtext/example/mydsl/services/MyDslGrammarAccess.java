@@ -20,18 +20,30 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Model");
-		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cGreetingsAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cGreetingsGreetingParserRuleCall_0_0 = (RuleCall)cGreetingsAssignment_0.eContents().get(0);
+		private final Assignment cImportsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImportsImportParserRuleCall_1_0 = (RuleCall)cImportsAssignment_1.eContents().get(0);
 		
 		//Model:
-		//	greetings+=Greeting*;
+		//	greetings+=Greeting* imports+=Import*;
 		public ParserRule getRule() { return rule; }
 
+		//greetings+=Greeting* imports+=Import*
+		public Group getGroup() { return cGroup; }
+
 		//greetings+=Greeting*
-		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
+		public Assignment getGreetingsAssignment_0() { return cGreetingsAssignment_0; }
 
 		//Greeting
-		public RuleCall getGreetingsGreetingParserRuleCall_0() { return cGreetingsGreetingParserRuleCall_0; }
+		public RuleCall getGreetingsGreetingParserRuleCall_0_0() { return cGreetingsGreetingParserRuleCall_0_0; }
+
+		//imports+=Import*
+		public Assignment getImportsAssignment_1() { return cImportsAssignment_1; }
+
+		//Import
+		public RuleCall getImportsImportParserRuleCall_1_0() { return cImportsImportParserRuleCall_1_0; }
 	}
 
 	public class GreetingElements extends AbstractParserRuleElementFinder {
@@ -61,10 +73,43 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//"!"
 		public Keyword getExclamationMarkKeyword_2() { return cExclamationMarkKeyword_2; }
 	}
+
+	public class ImportElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Import");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cImport_typeAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cImport_typeImportNumberKeyword_0_0 = (Keyword)cImport_typeAssignment_0.eContents().get(0);
+		private final Assignment cImport_numAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cImport_numINTTerminalRuleCall_1_0 = (RuleCall)cImport_numAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//Import:
+		//	Import_type="ImportNumber" import_num=INT ";";
+		public ParserRule getRule() { return rule; }
+
+		//Import_type="ImportNumber" import_num=INT ";"
+		public Group getGroup() { return cGroup; }
+
+		//Import_type="ImportNumber"
+		public Assignment getImport_typeAssignment_0() { return cImport_typeAssignment_0; }
+
+		//"ImportNumber"
+		public Keyword getImport_typeImportNumberKeyword_0_0() { return cImport_typeImportNumberKeyword_0_0; }
+
+		//import_num=INT
+		public Assignment getImport_numAssignment_1() { return cImport_numAssignment_1; }
+
+		//INT
+		public RuleCall getImport_numINTTerminalRuleCall_1_0() { return cImport_numINTTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
 	
 	
 	private final ModelElements pModel;
 	private final GreetingElements pGreeting;
+	private final ImportElements pImport;
 	
 	private final Grammar grammar;
 
@@ -77,6 +122,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
 		this.pGreeting = new GreetingElements();
+		this.pImport = new ImportElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -107,7 +153,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	greetings+=Greeting*;
+	//	greetings+=Greeting* imports+=Import*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -124,6 +170,16 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getGreetingRule() {
 		return getGreetingAccess().getRule();
+	}
+
+	//Import:
+	//	Import_type="ImportNumber" import_num=INT ";";
+	public ImportElements getImportAccess() {
+		return pImport;
+	}
+	
+	public ParserRule getImportRule() {
+		return getImportAccess().getRule();
 	}
 
 	//terminal ID:

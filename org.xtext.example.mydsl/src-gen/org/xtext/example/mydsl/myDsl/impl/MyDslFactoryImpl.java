@@ -66,6 +66,7 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
     {
       case MyDslPackage.MODEL: return createModel();
       case MyDslPackage.GREETING: return createGreeting();
+      case MyDslPackage.IMPORT: return createImport();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -91,6 +92,17 @@ public class MyDslFactoryImpl extends EFactoryImpl implements MyDslFactory
   {
     GreetingImpl greeting = new GreetingImpl();
     return greeting;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Import createImport()
+  {
+    ImportImpl import_ = new ImportImpl();
+    return import_;
   }
 
   /**

@@ -76,13 +76,22 @@ public interface MyDslPackage extends EPackage
   int MODEL__GREETINGS = 0;
 
   /**
+   * The feature id for the '<em><b>Imports</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__IMPORTS = 1;
+
+  /**
    * The number of structural features of the '<em>Model</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 1;
+  int MODEL_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.GreetingImpl <em>Greeting</em>}' class.
@@ -112,6 +121,43 @@ public interface MyDslPackage extends EPackage
    */
   int GREETING_FEATURE_COUNT = 1;
 
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.myDsl.impl.ImportImpl <em>Import</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.myDsl.impl.ImportImpl
+   * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getImport()
+   * @generated
+   */
+  int IMPORT = 2;
+
+  /**
+   * The feature id for the '<em><b>Import type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT__IMPORT_TYPE = 0;
+
+  /**
+   * The feature id for the '<em><b>Import num</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT__IMPORT_NUM = 1;
+
+  /**
+   * The number of structural features of the '<em>Import</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMPORT_FEATURE_COUNT = 2;
+
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Model <em>Model</em>}'.
@@ -135,6 +181,17 @@ public interface MyDslPackage extends EPackage
   EReference getModel_Greetings();
 
   /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.myDsl.Model#getImports <em>Imports</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Imports</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Model#getImports()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Imports();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Greeting <em>Greeting</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -154,6 +211,38 @@ public interface MyDslPackage extends EPackage
    * @generated
    */
   EAttribute getGreeting_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.myDsl.Import <em>Import</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Import</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Import
+   * @generated
+   */
+  EClass getImport();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Import#getImport_type <em>Import type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Import type</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Import#getImport_type()
+   * @see #getImport()
+   * @generated
+   */
+  EAttribute getImport_Import_type();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.myDsl.Import#getImport_num <em>Import num</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Import num</em>'.
+   * @see org.xtext.example.mydsl.myDsl.Import#getImport_num()
+   * @see #getImport()
+   * @generated
+   */
+  EAttribute getImport_Import_num();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -197,6 +286,14 @@ public interface MyDslPackage extends EPackage
     EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
 
     /**
+     * The meta object literal for the '<em><b>Imports</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__IMPORTS = eINSTANCE.getModel_Imports();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.GreetingImpl <em>Greeting</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -213,6 +310,32 @@ public interface MyDslPackage extends EPackage
      * @generated
      */
     EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.myDsl.impl.ImportImpl <em>Import</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.myDsl.impl.ImportImpl
+     * @see org.xtext.example.mydsl.myDsl.impl.MyDslPackageImpl#getImport()
+     * @generated
+     */
+    EClass IMPORT = eINSTANCE.getImport();
+
+    /**
+     * The meta object literal for the '<em><b>Import type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMPORT__IMPORT_TYPE = eINSTANCE.getImport_Import_type();
+
+    /**
+     * The meta object literal for the '<em><b>Import num</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMPORT__IMPORT_NUM = eINSTANCE.getImport_Import_num();
 
   }
 

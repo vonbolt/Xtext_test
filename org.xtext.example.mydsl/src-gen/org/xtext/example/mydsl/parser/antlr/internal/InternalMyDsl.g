@@ -77,10 +77,10 @@ ruleModel returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
+((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0()); 
+	        newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0_0()); 
 	    }
 		lv_greetings_0_0=ruleGreeting		{
 	        if ($current==null) {
@@ -95,7 +95,25 @@ ruleModel returns [EObject current=null]
 	    }
 
 )
-)*
+)*(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getModelAccess().getImportsImportParserRuleCall_1_0()); 
+	    }
+		lv_imports_1_0=ruleImport		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getModelRule());
+	        }
+       		add(
+       			$current, 
+       			"imports",
+        		lv_imports_1_0, 
+        		"Import");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)*)
 ;
 
 
@@ -141,6 +159,64 @@ ruleGreeting returns [EObject current=null]
 )	otherlv_2='!' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleImport
+entryRuleImport returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getImportRule()); }
+	 iv_ruleImport=ruleImport 
+	 { $current=$iv_ruleImport.current; } 
+	 EOF 
+;
+
+// Rule Import
+ruleImport returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_Import_type_0_0=	'ImportNumber' 
+    {
+        newLeafNode(lv_Import_type_0_0, grammarAccess.getImportAccess().getImport_typeImportNumberKeyword_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getImportRule());
+	        }
+       		setWithLastConsumed($current, "Import_type", lv_Import_type_0_0, "ImportNumber");
+	    }
+
+)
+)(
+(
+		lv_import_num_1_0=RULE_INT
+		{
+			newLeafNode(lv_import_num_1_0, grammarAccess.getImportAccess().getImport_numINTTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getImportRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"import_num",
+        		lv_import_num_1_0, 
+        		"INT");
+	    }
+
+)
+)	otherlv_2=';' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getImportAccess().getSemicolonKeyword_2());
     }
 )
 ;
