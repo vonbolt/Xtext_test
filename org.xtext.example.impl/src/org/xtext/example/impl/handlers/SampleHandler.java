@@ -29,6 +29,9 @@ public class SampleHandler extends AbstractHandler {
 				window.getShell(),
 				"Xtext test",
 				"Hello, Eclipse world");
+		
+		ActionController.run();
+		
 		return null;
 	}
 }
