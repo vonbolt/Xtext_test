@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Impl
-Bundle-SymbolicName: org.xtext.example.impl;singleton:=true
+Bundle-SymbolicName: org.xtext.example.mydsl.impl;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: org.xtext.example.impl.Activator
 Require-Bundle: org.eclipse.ui,
