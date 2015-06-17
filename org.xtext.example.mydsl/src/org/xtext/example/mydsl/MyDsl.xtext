@@ -4,7 +4,8 @@ generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
 
 Model:
 	greetings+=Greeting*
-	imports+=Import*;
+	imports+=Import*
+;
 	
 Greeting:
 	'Hello' name=ID '!'
@@ -13,6 +14,5 @@ Greeting:
 Import:
 	Import_type='ImportNumber' import_num=INT ';'
 ;
-
 
 

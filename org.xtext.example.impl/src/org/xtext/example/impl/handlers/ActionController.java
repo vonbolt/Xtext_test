@@ -20,14 +20,15 @@ public class ActionController {
 
 	public static void run(){
 		
-		log.debug("It runs!");
+		log.debug("It runs!");		
 		
-		MydslModelReader mydslreader = new MydslModelReader();
-		Model model = mydslreader.getModel();
+		
+//		MydslModelReader mydslreader = new MydslModelReader();
+//		Model model = mydslreader.getModel();
+//		model.getImports().forEach(imports->log.debug(imports.toString()));
 
-		for(Import importfile : model.getImports()){
-			importfile.getImportStyle();
-			new ArrayList<Object>(Arrays.asList(importfile.getImport_num())));
-		}
+//		for(Import importfile : model.getImports()){
+//			new ArrayList<Object>(Arrays.asList(importfile.getImport_num()));
+//		}
 	}
 }
